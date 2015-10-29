@@ -13,6 +13,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.9.1/bootstrap-table.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.9.1/locale/bootstrap-table-ja-JP.min.js"></script>
 
+    <script type='text/javascript'>var _merchantSettings=_merchantSettings || [];_merchantSettings.push(['AT', '1l3vwKn']);(function(){var autolink=document.createElement('script');autolink.type='text/javascript';autolink.async=true; autolink.src= ('https:' == document.location.protocol) ? 'https://autolinkmaker.itunes.apple.com/js/itunes_autolinkmaker.js' : 'http://autolinkmaker.itunes.apple.com/js/itunes_autolinkmaker.js';var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(autolink, s);})();</script>
 </head>
 <body>
 
@@ -34,13 +35,40 @@
 
     function getSongs(term) {
         var url = "https://itunes.apple.com/search?country=JP&lang=ja_JP&media=music&entity=musicTrack&term=" + term;
-        $("#table").bootstrapTable({
+        $.ajax({
+            type: 'GET',
             url: url,
-            columns:[
-                {field:"artistName"}
-            ]
+            dataType: 'jsonp',
+            success: function(json){
+                bindData(json.results);
+            }
         });
     }
+
+    function bindData(data) {
+        $("#table").bootstrapTable({
+            columns:[
+                {field:"artworkUrl30", align:"center", formatter:function(value, row, index) {
+                    return '<img src="' + value + '" />';
+                }},
+                {field:"artistName", title:"artistName"},
+                {field:"trackName", title:"trackName"},
+                {field:"collectionName", title:"collectionName"},
+                {field:"previewUrl", align:"center", title:"preview", formatter:function(value, row, index) {
+                    return '<a href="' + value + '" role="button" class="btn btn-link"><span class="glyphicon glyphicon-headphones" aria-hidden="true"></span></a>';
+                }},
+                {field:"isStreamable", align:"center", title:"isStreamable", formatter:function(value, row, index) {
+                    var trackViewUrl = row['trackViewUrl'];
+                    var logoUrl = Boolean(value) ? "http://linkmaker.itunes.apple.com/images/badges/ja-jp/badge_music-lrg.svg" : "http://linkmaker.itunes.apple.com/images/badges/ja-jp/badge_itunes-lrg.svg";
+                    return '<a href="' + trackViewUrl + '" style="display:inline-block;overflow:hidden;background:url(' + logoUrl + ') no-repeat;width:83px;height:20px;background-size:contain;"></a>';
+                }}
+            ],
+            data:data
+        });
+    }
+
 </script>
+
+
 </html>
 
