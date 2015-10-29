@@ -13,16 +13,18 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.9.1/bootstrap-table.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.9.1/locale/bootstrap-table-ja-JP.min.js"></script>
 
-    <script type='text/javascript'>var _merchantSettings = _merchantSettings || [];
-    _merchantSettings.push(['AT', '1l3vwKn']);
-    (function () {
-        var autolink = document.createElement('script');
-        autolink.type = 'text/javascript';
-        autolink.async = true;
-        autolink.src = ('https:' == document.location.protocol) ? 'https://autolinkmaker.itunes.apple.com/js/itunes_autolinkmaker.js' : 'http://autolinkmaker.itunes.apple.com/js/itunes_autolinkmaker.js';
-        var s = document.getElementsByTagName('script')[0];
-        s.parentNode.insertBefore(autolink, s);
-    })();</script>
+    <script type='text/javascript'>
+        var _merchantSettings = _merchantSettings || [];
+        _merchantSettings.push(['AT', '1l3vwKn']);
+        (function () {
+            var autolink = document.createElement('script');
+            autolink.type = 'text/javascript';
+            autolink.async = true;
+            autolink.src = ('https:' == document.location.protocol) ? 'https://autolinkmaker.itunes.apple.com/js/itunes_autolinkmaker.js' : 'http://autolinkmaker.itunes.apple.com/js/itunes_autolinkmaker.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(autolink, s);
+        })();
+    </script>
 </head>
 <body>
 
@@ -70,7 +72,6 @@
     }
 
     function bindData(data) {
-        console.log(data);
         $("#table").bootstrapTable('destroy');
         $("#table").bootstrapTable({
             columns: [
