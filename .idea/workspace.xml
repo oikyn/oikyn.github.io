@@ -28,10 +28,10 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/am/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7566064">
-              <caret line="74" column="154" selection-start-line="74" selection-start-column="154" selection-end-line="74" selection-end-column="154" />
+            <state vertical-scroll-proportion="0.6147427">
+              <caret line="41" column="21" selection-start-line="41" selection-start-column="21" selection-end-line="41" selection-end-column="21" />
               <folding>
-                <marker date="1446109799482" expanded="true" signature="3613:3716" placeholder="..." />
+                <marker date="1446110055903" expanded="true" signature="3721:3824" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -552,12 +552,12 @@
       <created>1446100792583</created>
       <option name="number" value="Default" />
       <updated>1446100792583</updated>
-      <workItem from="1446100797614" duration="8985000" />
+      <workItem from="1446100797614" duration="9239000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8985000" />
+    <option name="totallyTimeSpent" value="9239000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="546" y="0" width="1438" height="905" extended-state="0" />
@@ -602,10 +602,10 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/am/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7566064">
-          <caret line="74" column="154" selection-start-line="74" selection-start-column="154" selection-end-line="74" selection-end-column="154" />
+        <state vertical-scroll-proportion="0.6147427">
+          <caret line="41" column="21" selection-start-line="41" selection-start-column="21" selection-end-line="41" selection-end-column="21" />
           <folding>
-            <marker date="1446109799482" expanded="true" signature="3613:3716" placeholder="..." />
+            <marker date="1446110055903" expanded="true" signature="3721:3824" placeholder="..." />
           </folding>
         </state>
       </provider>

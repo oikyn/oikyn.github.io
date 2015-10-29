@@ -17,9 +17,9 @@
 </head>
 <body>
 
-<form class="form-inline">
+<form id="frm" class="form-inline" method="post">
     <div class="form-group"><input type="text" class="form-control" id="searchTerm"></div>
-    <button type="button" class="btn btn-default" onclick="search();">検索</button>
+    <button type="submit" class="btn btn-default">検索</button>
 </form>
 
 <div id="toolbar"></div>
@@ -37,7 +37,10 @@
 
 <script>
     $(function () {
-
+        $("#frm").submit(function (e) {
+            e.preventDefault();
+            search();
+        });
     });
 
     function search() {
