@@ -55,7 +55,9 @@
                 {field:"trackName", title:"trackName"},
                 {field:"collectionName", title:"collectionName"},
                 {field:"previewUrl", align:"center", title:"preview", formatter:function(value, row, index) {
-                    return '<a href="' + value + '" role="button" class="btn btn-link" target="_blank"><span class="glyphicon glyphicon-headphones" aria-hidden="true"></span></a>';
+                    var audioId = 'audio' + row["trackId"];
+                    var audio = '<audio id="' + audioId + '" src="' + value + '"></audio>';
+                    return audio + '<a href="#" role="button" class="btn btn-link" onclick="document.getElementById(\'' + audioId + '\').play();" ><span class="glyphicon glyphicon-headphones" aria-hidden="true"></span></a>';
                 }},
                 {field:"isStreamable", align:"center", title:"isStreamable", formatter:function(value, row, index) {
                     var trackViewUrl = row['trackViewUrl'];
