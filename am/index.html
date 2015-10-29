@@ -66,17 +66,15 @@
         $("#table").bootstrapTable({
             columns:[
                 {field:"artworkUrl60", align:"center", formatter:function(value, row, index) {
-                    return '<img src="' + value + '" />';
+                    var thumb = '<img src="' + value + '" />';
+                    var trackViewUrl = row['trackViewUrl'];
+                    var logoUrl = Boolean(row['isStreamable']) ? "https://linkmaker.itunes.apple.com/images/badges/ja-jp/badge_music-lrg.svg" : "https://linkmaker.itunes.apple.com/images/badges/ja-jp/badge_itunes-lrg.svg";
+                    return thumb + '<br /> <a href="' + trackViewUrl + '" style="display:inline-block;overflow:hidden;background:url(' + logoUrl + ') no-repeat;width:120px;height:30px;background-size:contain;"></a>';
                 }},
                 {field:"trackName", title:"trackName", formatter:function(value, row, index) {
                     var audio = '<audio src="' + row['previewUrl'] + '" controls preload="none"></audio>';
                     return row['artistName'] + '<br />' + value + '<br />' + row['collectionName'] + '<br />' + audio;
                 }},
-                {field:"isStreamable", align:"center", title:"isStreamable", formatter:function(value, row, index) {
-                    var trackViewUrl = row['trackViewUrl'];
-                    var logoUrl = Boolean(value) ? "https://linkmaker.itunes.apple.com/images/badges/ja-jp/badge_music-lrg.svg" : "https://linkmaker.itunes.apple.com/images/badges/ja-jp/badge_itunes-lrg.svg";
-                    return '<a href="' + trackViewUrl + '" style="display:inline-block;overflow:hidden;background:url(' + logoUrl + ') no-repeat;width:120px;height:30px;background-size:contain;"></a>';
-                }}
             ],
             data:data
         });
