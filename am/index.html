@@ -53,11 +53,8 @@
                 }},
                 {field:"artistName", title:"artistName"},
                 {field:"trackName", title:"trackName", formatter:function(value, row, index) {
-                    return value + '<br />' + row['collectionName'];
-                }},
-                {field:"previewUrl", align:"center", title:"preview", formatter:function(value, row, index) {
-                    return '<audio src="' + value + '" controls preload="none"></audio>';
-//                    return '<a href="' + value + '" role="button" class="btn btn-link" target="_blank"><span class="glyphicon glyphicon-headphones" aria-hidden="true"></span></a>';
+                    var audio = '<audio src="' + row['previewUrl'] + '" controls preload="none"></audio>';
+                    return value + '<br />' + row['collectionName'] + '<br />' + audio;
                 }},
                 {field:"isStreamable", align:"center", title:"isStreamable", formatter:function(value, row, index) {
                     var trackViewUrl = row['trackViewUrl'];
