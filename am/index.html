@@ -52,15 +52,16 @@
                     return '<img src="' + value + '" />';
                 }},
                 {field:"artistName", title:"artistName"},
-                {field:"trackName", title:"trackName"},
-                {field:"collectionName", title:"collectionName"},
+                {field:"trackName", title:"trackName", formatter:function(value, row, index) {
+                    return value + '<br />' + row['collectionName'];
+                }},
                 {field:"previewUrl", align:"center", title:"preview", formatter:function(value, row, index) {
                     return '<audio src="' + value + '" controls preload="none"></audio>';
 //                    return '<a href="' + value + '" role="button" class="btn btn-link" target="_blank"><span class="glyphicon glyphicon-headphones" aria-hidden="true"></span></a>';
                 }},
                 {field:"isStreamable", align:"center", title:"isStreamable", formatter:function(value, row, index) {
                     var trackViewUrl = row['trackViewUrl'];
-                    var logoUrl = Boolean(value) ? "http://linkmaker.itunes.apple.com/images/badges/ja-jp/badge_music-lrg.svg" : "http://linkmaker.itunes.apple.com/images/badges/ja-jp/badge_itunes-lrg.svg";
+                    var logoUrl = Boolean(value) ? "https://linkmaker.itunes.apple.com/images/badges/ja-jp/badge_music-lrg.svg" : "https://linkmaker.itunes.apple.com/images/badges/ja-jp/badge_itunes-lrg.svg";
                     return '<a href="' + trackViewUrl + '" style="display:inline-block;overflow:hidden;background:url(' + logoUrl + ') no-repeat;width:83px;height:20px;background-size:contain;"></a>';
                 }}
             ],
