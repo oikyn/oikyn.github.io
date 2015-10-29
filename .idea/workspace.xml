@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0bdbf793-2a2f-4a9d-a29b-974a434efe3d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/am/index.html" afterPath="$PROJECT_DIR$/am/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/applemusic/index.html" afterPath="$PROJECT_DIR$/applemusic/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="oikyn.github.io.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -26,10 +28,10 @@
   <component name="FileEditorManager">
     <leaf>
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/am/index.html">
+        <entry file="file://$PROJECT_DIR$/applemusic/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.50347704">
-              <caret line="72" column="96" selection-start-line="72" selection-start-column="96" selection-end-line="72" selection-end-column="96" />
+            <state vertical-scroll-proportion="2.2698193">
+              <caret line="96" column="22" selection-start-line="96" selection-start-column="22" selection-end-line="96" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -49,6 +51,7 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/am/index.html" />
+        <option value="$PROJECT_DIR$/applemusic/index.html" />
       </list>
     </option>
   </component>
@@ -181,7 +184,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="am" />
+              <option name="myItemId" value="applemusic" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -551,15 +554,15 @@
       <created>1446100792583</created>
       <option name="number" value="Default" />
       <updated>1446100792583</updated>
-      <workItem from="1446100797614" duration="9884000" />
+      <workItem from="1446100797614" duration="10651000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9884000" />
+    <option name="totallyTimeSpent" value="10651000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="279" y="1" width="1438" height="905" extended-state="0" />
+    <frame x="279" y="1" width="1438" height="905" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -599,10 +602,10 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/am/index.html">
+    <entry file="file://$PROJECT_DIR$/applemusic/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.50347704">
-          <caret line="72" column="96" selection-start-line="72" selection-start-column="96" selection-end-line="72" selection-end-column="96" />
+        <state vertical-scroll-proportion="2.2698193">
+          <caret line="96" column="22" selection-start-line="96" selection-start-column="22" selection-end-line="96" selection-end-column="22" />
           <folding />
         </state>
       </provider>

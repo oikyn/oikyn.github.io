@@ -13,7 +13,16 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.9.1/bootstrap-table.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.9.1/locale/bootstrap-table-ja-JP.min.js"></script>
 
-    <script type='text/javascript'>var _merchantSettings=_merchantSettings || [];_merchantSettings.push(['AT', '1l3vwKn']);(function(){var autolink=document.createElement('script');autolink.type='text/javascript';autolink.async=true; autolink.src= ('https:' == document.location.protocol) ? 'https://autolinkmaker.itunes.apple.com/js/itunes_autolinkmaker.js' : 'http://autolinkmaker.itunes.apple.com/js/itunes_autolinkmaker.js';var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(autolink, s);})();</script>
+    <script type='text/javascript'>var _merchantSettings = _merchantSettings || [];
+    _merchantSettings.push(['AT', '1l3vwKn']);
+    (function () {
+        var autolink = document.createElement('script');
+        autolink.type = 'text/javascript';
+        autolink.async = true;
+        autolink.src = ('https:' == document.location.protocol) ? 'https://autolinkmaker.itunes.apple.com/js/itunes_autolinkmaker.js' : 'http://autolinkmaker.itunes.apple.com/js/itunes_autolinkmaker.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(autolink, s);
+    })();</script>
 </head>
 <body>
 
@@ -54,7 +63,7 @@
             type: 'GET',
             url: url,
             dataType: 'jsonp',
-            success: function(json){
+            success: function (json) {
                 bindData(json.results);
             }
         });
@@ -64,20 +73,28 @@
         console.log(data);
         $("#table").bootstrapTable('destroy');
         $("#table").bootstrapTable({
-            columns:[
-                {field:"artworkUrl60", align:"center", formatter:function(value, row, index) {
-                    var thumb = '<img src="' + value + '" />';
-                    var trackViewUrl = row['trackViewUrl'];
-                    var logoUrl = Boolean(row['isStreamable']) ? "https://linkmaker.itunes.apple.com/images/badges/ja-jp/badge_music-lrg.svg" : "https://linkmaker.itunes.apple.com/images/badges/ja-jp/badge_itunes-lrg.svg";
-                    //logo size = 110, 40
-                    return thumb + '<br /> <a href="' + trackViewUrl + '" style="margin-top:5px;display:inline-block;overflow:hidden;background:url(' + logoUrl + ') no-repeat;width:82px;height:30px;background-size:contain;"></a>';
-                }},
-                {field:"trackName", title:"trackName", formatter:function(value, row, index) {
-                    var audio = '<audio src="' + row['previewUrl'] + '" controls preload="none"></audio>';
-                    return row['artistName'] + '<br />' + value + '<br />' + row['collectionName'] + '<br />' + audio;
-                }},
+            columns: [
+                {
+                    field: "artworkUrl60",
+                    align: "center",
+                    formatter: function (value, row, index) {
+                        var thumb = '<img src="' + value + '" />';
+                        var trackViewUrl = row['trackViewUrl'];
+                        var logoUrl = Boolean(row['isStreamable']) ? "https://linkmaker.itunes.apple.com/images/badges/ja-jp/badge_music-lrg.svg" : "https://linkmaker.itunes.apple.com/images/badges/ja-jp/badge_itunes-lrg.svg";
+                        //logo size = 110, 40
+                        return thumb + '<br /> <a href="' + trackViewUrl + '" style="margin-top:5px;display:inline-block;overflow:hidden;background:url(' + logoUrl + ') no-repeat;width:82px;height:30px;background-size:contain;"></a>';
+                    }
+                },
+                {
+                    field: "trackName",
+                    title: "trackName",
+                    formatter: function (value, row, index) {
+                        var audio = '<audio src="' + row['previewUrl'] + '" controls preload="none"></audio>';
+                        return row['artistName'] + '<br />' + value + '<br />' + row['collectionName'] + '<br />' + audio;
+                    }
+                },
             ],
-            data:data
+            data: data
         });
     }
 
