@@ -40,7 +40,7 @@
     <div style="margin:10px 0">
         <form id="frm" class="form-inline">
             <div class="form-group">
-                <input id="search" name="term" type="search" class="form-control" id="searchTerm" required autofocus />
+                <input id="search" name="term" type="search" class="form-control" required autofocus />
             </div>
             <button type="submit" class="btn btn-default">検索</button>
         </form>
@@ -49,8 +49,10 @@
     <div>
         <ul>
             <li><button type="button" class="btn btn-link" onclick="search('globe');">globe</button></li>
-            <li><button type="button" class="btn btn-link" onclick="search('TM Network');">tm network</button></li>
+            <li><button type="button" class="btn btn-link" onclick="search('TM NETWORK');">TM NETWORK</button></li>
+            <li><button type="button" class="btn btn-link" onclick="search('TRF');">TRF</button></li>
             <li><button type="button" class="btn btn-link" onclick="search('GLAY');">GLAY</button></li>
+            <li><button type="button" class="btn btn-link" onclick="search('Ne-yo');">Ne-yo</button></li>
         </ul>
         <div style="clear: both;"></div>
     </div>
@@ -74,13 +76,13 @@
     $(function () {
         $("#frm").submit(function (e) {
             e.preventDefault();
-            var term = $("#searchTerm").val();
+            var term = $("#search").val();
             search(term);
         });
     });
 
     function search(term) {
-        $("#searchTerm").val(term);
+        $("#search").val(term);
         getSongs(term);
     }
 
