@@ -25,6 +25,11 @@
             s.parentNode.insertBefore(autolink, s);
         })();
     </script>
+
+    <style>
+        ul {margin: 0; padding: 0; list-style-type: none;}
+        li {margin: 0; padding: 0; float: left;}
+    </style>
 </head>
 <body>
 
@@ -35,10 +40,19 @@
     <div style="margin:10px 0">
         <form id="frm" class="form-inline">
             <div class="form-group">
-                <input name="term" type="url" class="form-control" id="searchTerm" required autofocus />
+                <input id="search" name="term" type="search" class="form-control" id="searchTerm" required autofocus />
             </div>
             <button type="submit" class="btn btn-default">検索</button>
         </form>
+    </div>
+
+    <div>
+        <ul>
+            <li><button type="button" class="btn btn-link" onclick="search('globe');">globe</button></li>
+            <li><button type="button" class="btn btn-link" onclick="search('TM Network');">tm network</button></li>
+            <li><button type="button" class="btn btn-link" onclick="search('GLAY');">GLAY</button></li>
+        </ul>
+        <div style="clear: both;"></div>
     </div>
 
     <div id="toolbar"></div>
@@ -60,13 +74,14 @@
     $(function () {
         $("#frm").submit(function (e) {
             e.preventDefault();
-            search();
+            var term = $("#searchTerm").val();
+            search(term);
         });
     });
 
-    function search() {
-        var terms = $("#searchTerm").val();
-        getSongs(terms);
+    function search(term) {
+        $("#searchTerm").val(term);
+        getSongs(term);
     }
 
     function getSongs(term) {
