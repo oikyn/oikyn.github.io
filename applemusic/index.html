@@ -63,10 +63,11 @@
            data-search="true"
            data-show-refresh="true"
            data-show-export="false"
+           data-show-header="fasle"
            data-show-pagination-switch="true"
            data-pagination="true"
-           data-id-field="id"
-           data-detail-view="false"></table>
+           data-detail-view="false"
+           data-pagination-v-align="both"></table>
 
 </div>
 
@@ -116,7 +117,7 @@
                 },
                 {
                     field: "trackName",
-                    title: "trackName",
+//                    title: "",
                     formatter: function (value, row, index) {
                         var audio = '<audio src="' + row['previewUrl'] + '" controls preload="none"></audio>';
                         return row['artistName'] + '<br />' + value + '<br />' + row['collectionName'] + '<br />' + audio;
